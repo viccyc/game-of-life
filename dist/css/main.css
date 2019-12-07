@@ -17,3 +17,56 @@ select,
 button {
   font: inherit;
 }
+
+/**
+ * @section Grid Styles
+ */
+/* line 5, src/sass/components/_grid.scss */
+body {
+  padding: 20px;
+  background-color: #d0ba23;
+}
+
+/* line 10, src/sass/components/_grid.scss */
+#gridContainer {
+  padding-bottom: 10px;
+}
+
+/* line 14, src/sass/components/_grid.scss */
+table {
+  background-color: #9cc3d6;
+  border-spacing: 0;
+}
+
+/* line 19, src/sass/components/_grid.scss */
+td {
+  border: 1px solid #3a728c;
+  border-radius: 3px;
+  width: 40px;
+  height: 40px;
+}
+
+/* line 26, src/sass/components/_grid.scss */
+span {
+  color: #222;
+}
+
+/* line 30, src/sass/components/_grid.scss */
+#start,
+#clear {
+  padding: .75em;
+  border-radius: 5px;
+  border: none;
+  background-color: #3087ba;
+}
+
+/* line 38, src/sass/components/_grid.scss */
+td.dead {
+  background-color: transparent;
+}
+
+/* line 42, src/sass/components/_grid.scss */
+td.live {
+  background-color: #CC4774;
+  border-radius: 10px;
+}
