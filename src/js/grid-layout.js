@@ -1,4 +1,3 @@
-/*! project-name v0.0.1 | (c) 2019 YOUR NAME | MIT License | http://link-to-your-git-repo.com */
 var rows = 10;
 var columns = 10;
 
@@ -10,7 +9,6 @@ function initialize() {
 
 // Lay out the board in the form of a table
 function createTable() {
-
     var gridContainer = document.getElementById('gridContainer');
     if (!gridContainer) {
         // Throw error
@@ -24,14 +22,29 @@ function createTable() {
             var cell = document.createElement("td");
             cell.setAttribute("id", i + "_" + j);
             cell.setAttribute("class", "dead");
-            // cell.onclick = cellClickHandler;
+            cell.onclick = cellClickHandler;
             tableRow.appendChild(cell);
         }
         table.appendChild(tableRow);
     }
     gridContainer.appendChild(table);
-  console.log(gridContainer);
+}
 
+// function to de/colour in the cell if clicked depending on whether
+// its colored in already 
+function cellClickHandler() {
+  var rowcolumn = this.id.split("_");
+  var row = rowcolumn[0];
+  var column = rowcolumn[1];
+  
+  var classes = this.getAttribute("class");
+  if(classes.indexOf("live") > -1) {
+      this.setAttribute("class", "dead");
+      grid[row][column] = 0;
+  } else {
+      this.setAttribute("class", "live");
+      grid[row][column] = 1;
+  }
 }
 
 // RULES
