@@ -1,11 +1,16 @@
 /*! project-name v0.0.1 | (c) 2019 YOUR NAME | MIT License | http://link-to-your-git-repo.com */
+// var startButtonHandler = require('./rules');
+
 var rows = 10;
 var columns = 10;
+
+var grid = new Array(rows);
 
 // Initialize
 function initialize() {
   console.log('in initialize');
     createTable();
+    setupControlButtons();
 }
 
 // Lay out the board in the form of a table
@@ -44,15 +49,22 @@ function cellClickHandler() {
       grid[row][column] = 0;
   } else {
       this.setAttribute("class", "live");
+      console.log(grid);
+      console.log(row);
+      console.log(column);
+
       grid[row][column] = 1;
   }
 }
 
-// RULES
-// Any live cell with fewer than two live neighbours dies, as if caused by under-population.
-// Any live cell with two or three live neighbours lives on to the next generation.
-// Any live cell with more than three live neighbours dies, as if by overcrowding.
-// Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+function setupControlButtons() {
+    // start button
+    var startButton = document.getElementById('start');
+    startButton.onclick = startButtonHandler;
+    // clear button
+    var clearButton = document.getElementById('clear');
+    clearButton.onclick = clearButtonHandler;
+}
 
 // Start everything
 window.onload = initialize;
