@@ -8,9 +8,14 @@ var columns = 10;
 // Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
 
 function startButtonHandler() {
-    console.log('startButtonHandler');
+    console.log('in the startButtonHandler function');
+    return 'startButton function';
 }
 
 function clearButtonHandler() {
-    console.log('clearButtonHandler');
+    console.log('in the clearButtonHandler function');
+    return 'clearButton function';
 }
+
+exports.startButtonHandler = startButtonHandler;
+exports.clearButtonHandler = clearButtonHandler;

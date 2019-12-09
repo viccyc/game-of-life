@@ -76,3 +76,8 @@ function setupControlButtons() {
 
 // Start everything
 window.onload = initialize;
+
+exports.initializeGrids = initializeGrids;
+exports.createTable = createTable;
+exports.cellClickHandler = cellClickHandler;
+exports.setupControlButtons = setupControlButtons;
