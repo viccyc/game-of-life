@@ -15,8 +15,20 @@ describe("browser grid", () => {
   });
 });
 
-test('changes color of cell when clicked', () => {
-  // expect(grid.cellClickHandler()).toBe('');
+describe("event handler for clicking on grid cell", () => {
+  test("changes color (dead/live) of cell when clicked", () => {
+    // document.body.innerHTML = '<div id="gridContainer"></div>';
+    // grid.createTable();
+    // grid.cellClickHandler();
+    // expect(document.querySelectorAll(".dead").length).toEqual(1);
+    // expect(document.querySelectorAll(".live").length).toEqual(0);
+    // document.querySelector(".dead").click();
+    // expect(document.querySelectorAll(".dead").length).toEqual(0);
+    // expect(document.querySelectorAll(".live").length).toEqual(1);
+    // document.querySelector(".live").click();
+    // expect(document.querySelectorAll(".dead").length).toEqual(1);
+    // expect(document.querySelectorAll(".live").length).toEqual(0);
+  });
 });
 
 test('creates 2 buttons', () => {

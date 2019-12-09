@@ -9,7 +9,6 @@ var nextGrid = new Array(rows);
 
 // Initialize
 function initialize() {
-  console.log('in initialize');
     createTable();
     initializeGrids();
     setupControlButtons();
@@ -28,7 +27,6 @@ function initializeGrids() {
 function createTable() {
     var gridContainer = document.getElementById('gridContainer');
     if (!gridContainer) {
-        // Throw error
         console.error("Error - no containter div");
     }
     var table = document.createElement("table");
@@ -53,6 +51,7 @@ function createTable() {
 // function to de/colour in the cell if clicked depending on whether
 // its colored in already 
 function cellClickHandler() {
+    console.log('this: ', this);
   var rowcolumn = this.id.split("_");
   var row = rowcolumn[0];
   var column = rowcolumn[1];
@@ -63,10 +62,6 @@ function cellClickHandler() {
       grid[row][column] = 0;
   } else {
       this.setAttribute("class", "live");
-      console.log(grid);
-      console.log(row);
-      console.log(column);
-
       grid[row][column] = 1;
   }
 }
