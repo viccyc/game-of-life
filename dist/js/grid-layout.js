@@ -5,12 +5,21 @@ var rows = 10;
 var columns = 10;
 
 var grid = new Array(rows);
+var nextGrid = new Array(rows);
 
 // Initialize
 function initialize() {
   console.log('in initialize');
     createTable();
+    initializeGrids();
     setupControlButtons();
+}
+
+function initializeGrids() {
+    for (var i = 0; i < rows; i++) {
+        grid[i] = new Array(columns);
+        nextGrid[i] = new Array(columns);
+    }
 }
 
 // Lay out the board in the form of a table
