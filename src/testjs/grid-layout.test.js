@@ -1,11 +1,18 @@
 const grid = require('../js/grid-layout');
 
-test('initializes grids', () => {
-  // expect(grid.initializeGrids()).toBe('');
+describe("initializing grid function", () => {
+  test("should create an empty array of 10 * 10", () => {
+    expect(grid.initializeGrids()).toEqual([Array(10), Array(10), Array(10), Array(10), Array(10), Array(10), Array(10), Array(10), Array(10), Array(10)]);
+  });
 });
 
-test('creates a 10 x 10 table', () => {
-  // expect(grid.createTable()).toBe('');
+describe("browser grid", () => {
+  test("should display table with 10 rows and 10*10 (100) cells", () => {
+    document.body.innerHTML = '<div id="gridContainer"></div>';
+    grid.createTable();
+    expect(document.querySelectorAll("tr").length).toEqual(10);
+    expect(document.querySelectorAll("td").length).toEqual(100);
+  });
 });
 
 test('changes color of cell when clicked', () => {

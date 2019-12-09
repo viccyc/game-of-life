@@ -10,10 +10,13 @@ var columns = 10;
 
 function startButtonHandler() {
     console.log('in the startButtonHandler function');
+    return 'startButton function';
 }
 
 function clearButtonHandler() {
     console.log('in the clearButtonHandler function');
+    return 'clearButton function';
 }
 
-module.exports = startButtonHandler;
+exports.startButtonHandler = startButtonHandler;
+exports.clearButtonHandler = clearButtonHandler;

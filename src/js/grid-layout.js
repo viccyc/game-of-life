@@ -19,6 +19,8 @@ function initializeGrids() {
         grid[i] = new Array(columns);
         nextGrid[i] = new Array(columns);
     }
+    // return so that can test using Jest
+    return grid;
 }
 
 // Lay out the board in the form of a table
@@ -42,6 +44,9 @@ function createTable() {
         table.appendChild(tableRow);
     }
     gridContainer.appendChild(table);
+   
+    // return so that can test using Jest
+    return gridContainer;
 }
 
 // function to de/colour in the cell if clicked depending on whether
